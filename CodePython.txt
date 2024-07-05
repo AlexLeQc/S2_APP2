@@ -1,0 +1,48 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+#filtre passe-bande 5khz
+#Onde carré de l'oscillateur
+x1 = np.concatenate((10*np.ones(500), np.zeros(1000), 10*np.ones(500)))
+N1 = len(x1)
+dt1 = 1/1000
+t1 = np.arange(0, N1*dt1, dt1)
+plt.figure(figsize=(8, 6))
+plt.plot(t1, x1)
+plt.title('Onde carré de l oscillateur')
+plt.xlabel("s")
+plt.ylabel("V")
+plt.grid()
+
+Xk_pos = np.zeros(21, dtype=complex)
+nk_pos = np.zeros(21)
+T1 = dt1*N1
+f1 = 1/T1
+w01 = 2*np.pi*f1
+X0 = (1/T1)*np.sum(x1)*dt1
+for k in np.arange(1, 21, 1):
+    Xk = (1/T1)*np.sum(x1*np.exp(-1j*k*w01*t1))*dt1
+    Xk_pos[k-1] = Xk
+    nk_pos[k-1] = k
+
+Xk_neg = np.conj(Xk_pos)
+Xk_neg = Xk_neg[::-1]
+nk_neg = -1*nk_pos[::-1]
+f_fond = (1/N1)*(1/dt1)
+nk = np.concatenate((nk_neg, [0], nk_pos))
+X_k = np.concatenate((Xk_neg, [X0], Xk_pos))
+#Amplitude du filtre
+plt.figure()
+plt.stem(nk, np.abs(X_k))
+plt.title('Amplitude du filtre passe-bande')
+plt.xlabel("k")
+plt.ylabel("V")
+plt.grid()
+#Phase du filtre
+plt.figure()
+plt.stem(nk, np.angle(X_k))
+plt.title('Phase du filtre passe-bande')
+plt.grid()
+plt.xlabel("k")
+plt.ylabel("rad")
+plt.show()
