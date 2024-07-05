@@ -1,0 +1,83 @@
+
+Plan de test APP1
+
+Premier test
+
+-----------------------------------------------
+----Couche 0
+Couche initialisee
+----Couche 1
+Couche initialisee
+----Couche 2
+Rectangle(x=0, y=3, l=7, h=5, aire=35)
+----Couche 3
+Rectangle(x=0, y=1, l=4, h=3, aire=12)
+Carre(x=4, y=3, c=5, aire=25)
+Cercle(x=4, y=9, r=2, aire=12.5664)
+----Couche 4
+Couche initialisee
+-----------------------------------------------
+
+Aire totale du canevas: 84.5664
+
+Deuxieme test
+
+-----------------------------------------------
+----Couche 0
+Rectangle(x=0, y=0, l=1, h=1, aire=1)
+Carre(x=0, y=0, c=3, aire=9)
+----Couche 1
+Couche initialisee
+----Couche 2
+Rectangle(x=0, y=3, l=7, h=5, aire=35)
+----Couche 3
+Rectangle(x=3, y=4, l=4, h=3, aire=12)
+Carre(x=7, y=6, c=5, aire=25)
+Cercle(x=7, y=12, r=2, aire=12.5664)
+----Couche 4
+Couche initialisee
+-----------------------------------------------
+
+Aire totale du canevas: 94.5664
+
+Troisieme test
+
+-----------------------------------------------
+----Couche 0
+Rectangle(x=0, y=0, l=1, h=1, aire=1)
+----Couche 1
+Couche initialisee
+----Couche 2
+Rectangle(x=0, y=3, l=7, h=5, aire=35)
+----Couche 3
+Rectangle(x=3, y=4, l=4, h=3, aire=12)
+Carre(x=7, y=6, c=5, aire=25)
+Cercle(x=7, y=12, r=2, aire=12.5664)
+----Couche 4
+Couche initialisee
+-----------------------------------------------
+
+Aire totale du canevas: 85.5664
+
+Quatrieme test
+
+-----------------------------------------------
+----Couche 0
+Couche initialisee
+----Couche 1
+Couche initialisee
+----Couche 2
+Couche initialisee
+----Couche 3
+Couche initialisee
+----Couche 4
+Couche initialisee
+-----------------------------------------------
+
+Aire totale du canevas: 0
+
+
+
+─▄██▄██▄
+─▀█████▀
+───▀█▀
